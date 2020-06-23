@@ -5,7 +5,6 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
 
-
     return (
         <div className={s.postsBlock}>
             <h3>My posts</h3>
@@ -17,7 +16,7 @@ const MyPosts = (props) => {
             </div>
 
             <div className={s.posts}>
-                {props.MyPostsData.map(m=><Post message={m.massage} likesCount={m.likesCount}/>)}
+                {props.profilePosts.map(m => <Post message={m.message} likesCount={m.likesCount}/>)}
             </div>
         </div>
     )
