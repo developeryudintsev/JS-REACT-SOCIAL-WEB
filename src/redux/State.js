@@ -1,4 +1,5 @@
 import React from 'react';
+import {renderEntireTree} from "../render";
 
 let state = {
     profilePage: {
@@ -34,8 +35,8 @@ export  let addPosts=(postMessage)=>{
         messages: postMessage,
         lickeCount:0
     }
-
    state.profilePage.posts.push(newPost)
+    renderEntireTree(state)
 }
 
 export default state;
